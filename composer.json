@@ -1,9 +1,8 @@
 {
-    "name": "grandt/phpepub",
+    "name": "tizis/phpepub",
     "type": "library",
     "description": "Package to create and stream e-books in the ePub 2.0 and 3.0 formats.",
     "keywords": ["epub", "e-book"],
-    "homepage": "https://github.com/Grandt/PHPZip",
     "license": "LGPL-2.1",
     "minimum-stability": "stable",
     "authors": [
@@ -11,11 +10,16 @@
             "name": "A. Grandt",
             "email": "php@grandt.com",
             "homepage": "http://grandt.com",
-            "role": "Developer"
+            "role": "Original developer"
+        },
+        {
+            "name": "Roman Yepanchenko",
+            "homepage": "https://github.com/tizis",
+            "role": "Fork developer"
         }
     ],
     "require": {
-        "php": ">=5.3.0",
+        "php": ">=5.6.0",
         "phpzip/phpzip": "~2.0.7",
         "grandt/phpresizegif": "~1.0.3",
         "grandt/relativepath": "~1.0.1"
