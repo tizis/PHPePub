@@ -12,7 +12,6 @@ See the examples for example usage. The php files have "some" doumentation in th
 
 ## Installation
 
-### Import
 Add this requirement to your `composer.json` file:
 ```json
     "tizis/phpepub": ">=5.0.0"
