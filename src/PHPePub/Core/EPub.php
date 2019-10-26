@@ -1297,7 +1297,7 @@ class EPub {
 
         $this->addCSSFile("Styles/CoverPage.css", "CoverPageCss", $coverPageCss);
         $this->addFile($imgPath, "CoverImage", $imageData, $mimetype);
-        $this->addReferencePage("CoverPage", "CoverPage.xhtml", $coverPage, "cover");
+        //     $this->addReferencePage("CoverPage", "CoverPage.xhtml", $coverPage, "cover");
         $this->isCoverImageSet = true;
 
         return true;
@@ -2058,10 +2058,10 @@ class EPub {
         }
 
         reset($this->ncx->chapterList);
-		foreach ($this->ncx->chapterList as $firstChapterName => $firstChapterNavPoint) {
+        foreach ($this->ncx->chapterList as $firstChapterName => $firstChapterNavPoint) {
             break;
         }
-		
+
         /** @var $firstChapterNavPoint NavPoint */
         $firstChapterFileName = $firstChapterNavPoint->getContentSrc();
         $this->opf->addReference(Reference::TEXT, StringHelper::decodeHtmlEntities($firstChapterName), $firstChapterFileName);
@@ -2103,7 +2103,7 @@ class EPub {
 
         return true;
     }
-    
+
     /**
      * Finalize and build final ePub structures.
      *
@@ -2178,7 +2178,7 @@ class EPub {
                             $tocData .= "\t<p class='level1 reference'><a href=\"TOC.xhtml\">" . $this->tocTitle . "</a></p>\n";
                         } else {
                             if ($item === "cover" && $this->isCoverImageSet) {
-                                $tocData .= "\t<p class='level1 reference'><a href=\"CoverPage.xhtml\">" . $descriptive . "</a></p>\n";
+                                //    $tocData .= "\t<p class='level1 reference'><a href=\"CoverPage.xhtml\">" . $descriptive . "</a></p>\n";
                             }
                         }
                     }
@@ -2229,7 +2229,7 @@ class EPub {
 
         return $this->ncx->finalizeEPub3($title, $cssFileName);
     }
-    
+
     /**
      * Return the finalized book.
      *
@@ -2282,7 +2282,7 @@ class EPub {
 
         return false;
     }
-    
+
     /**
      * Retrieve an array of file names currently added to the book.
      * $key is the filename used in the book
@@ -2317,7 +2317,7 @@ class EPub {
     function getSplitSize() {
         return $this->splitDefaultSize;
     }
-    
+
     /**
      * @return string
      */
